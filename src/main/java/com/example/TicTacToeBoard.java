@@ -48,7 +48,7 @@ public Evaluation evaluate(){
     }
 
 }
-
+@Override
 public static boolean winner_of_the_game(char val,String board1){
   
   if((board1.charAt(0)==val)&&(board1.charAt(1)==val)&&(board1.charAt(2)==val))
