@@ -13,7 +13,7 @@ public Evaluation evaluate(){
     int o_count=0;
     if(board1.length()!=9)
     {
-      return Evaluation.InvalidInput;
+      return Evaluation.invalidInput;
     }
     for(int i=0;i<board1.length();i++)
     {
@@ -26,30 +26,30 @@ public Evaluation evaluate(){
         }
     }
     
-    boolean player_x=winner('x',board1);
-    boolean player_o=winner('o',board1);
+    boolean player_x=winner_of_the_game('x',board1);
+    boolean player_o=winner_of_the_game('o',board1);
     
   
     if(Math.abs(x_count - o_count)<=2){
-      return Evaluation.UnreachableState;
+      return Evaluation.unreachableState;
     }
 
     if(player_o && player_x){
-      return Evaluation.UnreachableState;
+      return Evaluation.unreachableState;
     }
     else if(player_x){
-      return Evaluation.Xwins;
+      return Evaluation.xwins;
     }
     else if(player_o){
-      return Evaluation.Owins;
+      return Evaluation.owins;
     }
     else{
-      return Evaluation.NoWinner;
+      return Evaluation.noWinner;
     }
 
 }
 
-public static boolean winner(char val,String board1){
+public static boolean winner_of_the_game(char val,String board1){
   
   if((board1.charAt(0)==val)&&(board1.charAt(1)==val)&&(board1.charAt(2)==val))
       return true;
