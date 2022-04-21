@@ -9,8 +9,8 @@ public class TicTacToeBoard {
      board1=board.toLowerCase();
   }
 public Evaluation evaluate(){
-    int x_count=0;
-    int o_count=0;
+    int x_counts=0;
+    int o_counts=0;
     if(board1.length()!=9)
     {
       return Evaluation.invalidInput;
@@ -19,28 +19,28 @@ public Evaluation evaluate(){
     {
         if(board1.charAt(i)== 'x')
         {
-            x_count++;
+            x_counts++;
         }
         else{
-            o_count++;
+            o_counts++;
         }
     }
     
-    boolean player_x=winner_of_the_game('x',board1);
-    boolean player_o=winner_of_the_game('o',board1);
+    boolean Player_X=winner_of_the_game('x',board1);
+    boolean Player_Y=winner_of_the_game('o',board1);
     
   
-    if(Math.abs(x_count - o_count)<=2){
+    if(Math.abs(x_counts - o_counts)<=2){
       return Evaluation.unreachableState;
     }
 
-    if(player_o && player_x){
+    if(Player_Y && Player_X){
       return Evaluation.unreachableState;
     }
-    else if(player_x){
+    else if(Player_X){
       return Evaluation.xwins;
     }
-    else if(player_o){
+    else if(player_Y){
       return Evaluation.owins;
     }
     else{
