@@ -26,8 +26,8 @@ public Evaluation evaluate(){
         }
     }
     
-    boolean Player_X= Winner_Of_The_Game('x',board1);
-    boolean Player_Y= Winner_Of_The_Game('o',board1);
+    boolean Player_X= Winner('x',board1);
+    boolean Player_Y= Winner('o',board1);
     
   
     if(Math.abs(x_counts - o_counts)<=2){
@@ -49,7 +49,7 @@ public Evaluation evaluate(){
 
 }
 @Override
-public static boolean Winner_Of_The_Game(char val,String board1){
+public static boolean Winner(char val,String board1){
   
   if((board1.charAt(0)==val)&&(board1.charAt(1)==val)&&(board1.charAt(2)==val))
       return true;
