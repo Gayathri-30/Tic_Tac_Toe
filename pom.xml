@@ -1,0 +1,8 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>gay</groupId>
+  <artifactId>Tic_Tac_Toe</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Tic_Tac_Toe</name>
+  <description>Tic_Tac_Toe</description>
+</project>
